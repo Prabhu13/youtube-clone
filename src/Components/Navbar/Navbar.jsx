@@ -11,15 +11,12 @@ import profile_icon from '../../assets/user_profile.jpg'
 
 
 
-const Navbar = () => {
+const Navbar = ({setSidebar}) => {
 
     return (
         <nav className='flex-div'>
             <div className="nav-left flex-div">
-
-
-
-                <img className="menu_icon" src={menu_icon} alt=""></img>
+                <img className="menu-icon"  onClick={()=>setSidebar(prev=>prev===false?true:false)} src={menu_icon}  alt=""></img>
                 <img className="logo" src={logo} alt=""></img>
             </div>
 
